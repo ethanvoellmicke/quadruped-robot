@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="qr_robot_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.15064253434013 0.0700000000000003 0.00666886897024865"
+        rpy="0 0 0" />
+      <mass
+        value="0.198371061990118" />
+      <inertia
+        ixx="0.00036504091117598"
+        ixy="5.19520227443928E-19"
+        ixz="1.94981330804241E-06"
+        iyy="0.00175563313208596"
+        iyz="4.82096077171752E-21"
+        izz="0.00210157240958524" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FrontLeftLink1">
+    <inertial>
+      <origin
+        xyz="0.0320386942573502 0.00671480018784498 0.0109429905159666"
+        rpy="0 0 0" />
+      <mass
+        value="0.095813289188243" />
+      <inertia
+        ixx="2.42425602673094E-05"
+        ixy="4.73666922265954E-07"
+        ixz="9.00567316023783E-07"
+        iyy="2.49753923477407E-05"
+        iyz="5.54686215981736E-08"
+        izz="2.86315080044085E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontLeftLink1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontLeftLink1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontLeftJoint1"
+    type="revolute">
+    <origin
+      xyz="0.0293 0.0131592409951216 0.0106456547118375"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FrontLeftLink1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="FrontLeftLink2">
+    <inertial>
+      <origin
+        xyz="0.00250391100516545 -0.0198206905886673 -0.0182298717509004"
+        rpy="0 0 0" />
+      <mass
+        value="0.105670923588723" />
+      <inertia
+        ixx="0.000126642636731097"
+        ixy="-1.24273055426145E-07"
+        ixz="2.35620380502297E-06"
+        iyy="0.00011886602057806"
+        iyz="6.7582342278957E-06"
+        izz="2.24264702225938E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontLeftLink2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontLeftLink2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontLeftJoint2"
+    type="revolute">
+    <origin
+      xyz="0.0436000007976901 -0.0287689722180402 0.0234127349505281"
+      rpy="0 0 0" />
+    <parent
+      link="FrontLeftLink1" />
+    <child
+      link="FrontLeftLink2" />
+    <axis
+      xyz="0 -0.999898265834073 0.0142638698119604" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="FrontLeftLink3">
+    <inertial>
+      <origin
+        xyz="-0.0374641213885109 -1.06053058834821E-05 -0.000743432680026412"
+        rpy="0 0 0" />
+      <mass
+        value="0.0182031554795256" />
+      <inertia
+        ixx="4.05238235702726E-07"
+        ixy="-9.37000337039693E-09"
+        ixz="-6.56837887925087E-07"
+        iyy="3.35632551810641E-05"
+        iyz="-1.0091410536653E-09"
+        izz="3.349252871874E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontLeftLink3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontLeftLink3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontLeftJoint3"
+    type="revolute">
+    <origin
+      xyz="0.00238198079490237 -0.00906789307442923 -0.10985603587794"
+      rpy="0 0 0" />
+    <parent
+      link="FrontLeftLink2" />
+    <child
+      link="FrontLeftLink3" />
+    <axis
+      xyz="0 0.999898265834074 -0.0142638698119472" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="BackLeftLink1">
+    <inertial>
+      <origin
+        xyz="0.0320386930122367 0.00671480005431713 0.0109429902737703"
+        rpy="0 0 0" />
+      <mass
+        value="0.095813282509179" />
+      <inertia
+        ixx="2.424255898585E-05"
+        ixy="4.73668061830627E-07"
+        ixz="9.00566360590198E-07"
+        iyy="2.49753901033791E-05"
+        iyz="5.54679987190611E-08"
+        izz="2.8631505490848E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackLeftLink1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackLeftLink1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackLeftJoint1"
+    type="revolute">
+    <origin
+      xyz="0.1943 0.0131592409951331 0.0106456547118291"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BackLeftLink1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="BackLeftLink2">
+    <inertial>
+      <origin
+        xyz="0.00231984764769877 -0.0186995825345528 -0.0097469970549835"
+        rpy="0 0 0" />
+      <mass
+        value="0.105670923574705" />
+      <inertia
+        ixx="0.000126642636728268"
+        ixy="-1.24273056271821E-07"
+        ixz="2.35620380423781E-06"
+        iyy="0.000118866020576161"
+        iyz="6.75823422930414E-06"
+        izz="2.2426470220495E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackLeftLink2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackLeftLink2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackLeftJoint2"
+    type="revolute">
+    <origin
+      xyz="0.0437840641547808 -0.0298900802718516 0.0149298602539664"
+      rpy="0 0 0" />
+    <parent
+      link="BackLeftLink1" />
+    <child
+      link="BackLeftLink2" />
+    <axis
+      xyz="0 -0.999898265834074 0.0142638698119524" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="BackLeftLink3">
+    <inertial>
+      <origin
+        xyz="-0.0374641213885109 -1.06053058839262E-05 -0.00074343268002619"
+        rpy="0 0 0" />
+      <mass
+        value="0.0182031554795257" />
+      <inertia
+        ixx="4.05238235702727E-07"
+        ixy="-9.37000337039493E-09"
+        ixz="-6.56837887925088E-07"
+        iyy="3.35632551810641E-05"
+        iyz="-1.00914105366526E-09"
+        izz="3.349252871874E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackLeftLink3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackLeftLink3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackLeftJoint3"
+    type="revolute">
+    <origin
+      xyz="0.00219791743781195 -0.00794678502062873 -0.10137316118137"
+      rpy="0 0 0" />
+    <parent
+      link="BackLeftLink2" />
+    <child
+      link="BackLeftLink3" />
+    <axis
+      xyz="0 0.999898265834074 -0.0142638698119472" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="FrontRightLink1">
+    <inertial>
+      <origin
+        xyz="-0.0323310935630463 -0.00671937509207754 0.0112637002553833"
+        rpy="0 0 0" />
+      <mass
+        value="0.0958132833021362" />
+      <inertia
+        ixx="2.42425591949508E-05"
+        ixy="5.957000753736E-07"
+        ixz="-7.57923580736671E-07"
+        iyy="2.49145672893248E-05"
+        iyz="-5.64566885173689E-08"
+        izz="2.85706263656161E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontRightLink1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontRightLink1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontRightJoint1"
+    type="revolute">
+    <origin
+      xyz="0.0956999999999999 0.126847890939777 0.0101457055789318"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FrontRightLink1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="FrontRightLink2">
+    <inertial>
+      <origin
+        xyz="0.00329836555069063 0.0198198040307558 -0.0181677621787976"
+        rpy="0 0 0" />
+      <mass
+        value="0.105670922221913" />
+      <inertia
+        ixx="0.000126469712245493"
+        ixy="2.98024996222313E-07"
+        ixz="4.85342263795623E-06"
+        iyy="0.000118865857000462"
+        iyz="-6.75375005925774E-06"
+        izz="2.2599557051989E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontRightLink2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontRightLink2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontRightJoint2"
+    type="revolute">
+    <origin
+      xyz="-0.0250999979365873 0.0287618406715562 0.0239126892931877"
+      rpy="0 0 0" />
+    <parent
+      link="FrontRightLink1" />
+    <child
+      link="FrontRightLink2" />
+    <axis
+      xyz="0 0.999898265834074 0.0142638698119114" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="FrontRightLink3">
+    <inertial>
+      <origin
+        xyz="-0.0374485542494689 1.87013458978758E-05 -0.001310965648053"
+        rpy="0 0 0" />
+      <mass
+        value="0.0182031554795256" />
+      <inertia
+        ixx="4.3274028859394E-07"
+        ixy="1.65161536539199E-08"
+        ixz="-1.15778351979626E-06"
+        iyy="3.35632495855518E-05"
+        iyz="1.40138684681007E-09"
+        izz="3.34650322613608E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontRightLink3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/FrontRightLink3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontRightJoint3"
+    type="revolute">
+    <origin
+      xyz="0.00520261170808645 0.00906650469202241 -0.109758742612488"
+      rpy="0 0 0" />
+    <parent
+      link="FrontRightLink2" />
+    <child
+      link="FrontRightLink3" />
+    <axis
+      xyz="0 -0.999898265834074 -0.0142638698119283" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="BackRightLink1">
+    <inertial>
+      <origin
+        xyz="-0.0319884074732348 -0.00671937509456044 0.0112637002557312"
+        rpy="0 0 0" />
+      <mass
+        value="0.095813283346156" />
+      <inertia
+        ixx="2.42425592065133E-05"
+        ixy="5.95700065646554E-07"
+        ixz="-7.57923579339438E-07"
+        iyy="2.49145673011966E-05"
+        iyz="-5.64566872585849E-08"
+        izz="2.85706263851091E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackRightLink1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackRightLink1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackRightJoint1"
+    type="revolute">
+    <origin
+      xyz="0.2607 0.126847890939778 0.0101457055789318"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BackRightLink1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="BackRightLink2">
+    <inertial>
+      <origin
+        xyz="0.00329836555069096 0.0198198040307562 -0.018167762178798"
+        rpy="0 0 0" />
+      <mass
+        value="0.105670922221913" />
+      <inertia
+        ixx="0.000126469712245493"
+        ixy="2.98024996222296E-07"
+        ixz="4.85342263795622E-06"
+        iyy="0.000118865857000461"
+        iyz="-6.75375005925775E-06"
+        izz="2.2599557051989E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackRightLink2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackRightLink2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackRightJoint2"
+    type="revolute">
+    <origin
+      xyz="-0.0240999979365872 0.0287618406715551 0.0239126892931874"
+      rpy="0 0 0" />
+    <parent
+      link="BackRightLink1" />
+    <child
+      link="BackRightLink2" />
+    <axis
+      xyz="0 0.999898265834074 0.0142638698119114" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="5" />
+  </joint>
+  <link
+    name="BackRightLink3">
+    <inertial>
+      <origin
+        xyz="-0.0374485542494688 1.87013458978758E-05 -0.00131096564805289"
+        rpy="0 0 0" />
+      <mass
+        value="0.0182031554795256" />
+      <inertia
+        ixx="4.3274028859394E-07"
+        ixy="1.65161536539199E-08"
+        ixz="-1.15778351979625E-06"
+        iyy="3.35632495855518E-05"
+        iyz="1.40138684681007E-09"
+        izz="3.34650322613608E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackRightLink3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://qr_robot_description/meshes/BackRightLink3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackRightJoint3"
+    type="revolute">
+    <origin
+      xyz="0.00520261170808656 0.00906650469202264 -0.109758742612488"
+      rpy="0 0 0" />
+    <parent
+      link="BackRightLink2" />
+    <child
+      link="BackRightLink3" />
+    <axis
+      xyz="0 -0.999898265834074 -0.0142638698119283" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="5" />
+  </joint>
+</robot>

@@ -1,0 +1,29 @@
+# ROS 2 generated folders
+ros2/build/
+ros2/install/
+ros2/log/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Python generated files
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Arduino generated files
+*.elf
+*.hex
+*.bin
+
+# Temporary and operating-system files
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
