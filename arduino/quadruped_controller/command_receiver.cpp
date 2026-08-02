@@ -12,8 +12,8 @@
 
 namespace
 {
-const char WIFI_NAME[] = "iPhone";
-const char WIFI_PASSWORD[] = "12345678";
+const char WIFI_NAME[] = "xxxxxxxx";
+const char WIFI_PASSWORD[] = "xxxxxxxx";
 constexpr unsigned int UDP_PORT = 5005;
 constexpr size_t COMMAND_BUFFER_SIZE = 96;
 constexpr unsigned long WIFI_RETRY_INTERVAL_MS = 5000;
