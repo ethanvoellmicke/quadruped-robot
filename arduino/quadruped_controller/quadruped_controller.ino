@@ -1,6 +1,8 @@
+
 #include "servo_controller.h"
 #include "gait_controller.h"
 #include "command_receiver.h"
+#include "imu_controller.h"
 
 void setup()
 {
@@ -13,14 +15,24 @@ void setup()
   initializeServoController();
   initializeGaitController();
   initializeCommandReceiver();
+  initializeIMU();
 
-  Serial.println("Ready. Commands: stand, crawl, trot, speed <value>, height <value>, status");
+  Serial.println(
+    "Ready. Commands: stand, crawl, trot, speed <value>, height <value>, status"
+  );
 }
 
 void loop()
 {
-  // Keep the 20 ms gait scheduler first so communication cannot starve motion.
+  //keep gait updates frequent so communication and IMU reads
+  // do not interrupt the 20 ms motion scheduler.
   updateGaitController();
+
   updateCommandReceiver();
+
+  updateGaitController();
+
+  updateIMU();
+
   updateGaitController();
 }

@@ -16,4 +16,10 @@ float getGaitSpeed();
 void setGroundHeight(float zGround);
 float getGroundHeight();
 
+void setForwardCommand(float value);
+float getForwardCommand();
+
+void setTurnCommand(float value);
+float getTurnCommand();
+
 #endif
